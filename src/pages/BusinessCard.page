@@ -1,0 +1,9 @@
+<apex:page showHeader="true" sidebar="true">
+	<div class="mypage">
+        {!$User.FirstName}
+		{!$User.LastName}
+		{!$User.Email}
+		{!$User.Phone}
+		{!$User.Title}
+    </div>
+</apex:page>

@@ -1,0 +1,25 @@
+<aura:component >
+    
+    <aura:attribute name="item" type="Camping_Item__c" required="true"/>
+
+    <li class="slds-item">
+        <div class="slds-tile slds-tile--board">
+          <h3 class="slds-truncate" title="Anypoint Connectors"><a href="javascript:void(0);">{!v.item.Name}</a></h3>
+          <div class="slds-tile__detail slds-text-body--small">
+            <ul class="slds-list--horizontal slds-has-dividers--right slds-tile__meta">
+              <li class="slds-item">Price</li>
+              <li class="slds-item">{!v.item.Price__c}</li>
+            </ul>
+            <ul class="slds-list--horizontal slds-has-dividers--right slds-tile__meta">
+              <li class="slds-item">Quantity</li>
+              <li class="slds-item">{!v.item.Quantity__c}</li>
+            </ul>
+            <ul class="slds-list--horizontal slds-has-dividers--right slds-tile__meta">
+              <li class="slds-item">Packed</li>
+              <li class="slds-item">{!v.item.Packed__c}</li>
+            </ul>
+            <ui:button aura:id="packedButton" label="Packed!" press="{!c.packItem}"/> 
+          </div>
+        </div>
+    </li>
+</aura:component>

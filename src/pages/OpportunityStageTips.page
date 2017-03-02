@@ -1,0 +1,31 @@
+<apex:page docType="html-5.0" standardController="Opportunity">
+	<style>
+        .mypage .tip {
+            margin: 12px 0;
+            font-size: 64px;
+            text-align: center;
+        }
+        .mypage .opptStage {
+            font-size: 24px;
+            text-align: center;
+            color: green;
+        }
+    </style>
+
+     <div class="mypage">
+        Stage:
+        <div class="opptStage">{!Opportunity.StageName}</div>
+       	<apex:outputPanel rendered="{!Opportunity.StageName == 'Prospecting'}">
+       		<div class="tip">{!Opportunity.StageName}</div>
+       	</apex:outputPanel>
+       	<apex:outputPanel rendered="{!Opportunity.StageName == 'Needs Analysis'}">
+       		<div class="tip">{!Opportunity.StageName}</div>
+       	</apex:outputPanel>
+       	<apex:outputPanel rendered="{!Opportunity.StageName == 'Proposal/Price Quote'}">
+       		<div class="tip">{!Opportunity.StageName}</div>
+       	</apex:outputPanel>
+       	<apex:outputPanel rendered="{!Opportunity.StageName == 'Negotiation/Review'}">
+       		<div class="tip">{!Opportunity.StageName}</div>
+       	</apex:outputPanel>
+    </div>
+</apex:page>
